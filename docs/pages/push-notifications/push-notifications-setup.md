@@ -32,8 +32,8 @@ registerForPushNotificationsAsync = async () => {
     /* @info Alright, we got our token! */
     const token = await Notifications.getExpoPushTokenAsync();
     /* @end */
-    console.log(token);
-    this.setState({ expoPushToken: token });
+    console.log(token.data);
+    this.setState({ expoPushToken: token.data });
   } else {
     alert('Must use physical device for Push Notifications');
   }
